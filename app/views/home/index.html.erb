@@ -1,0 +1,9 @@
+<h1>Welcome to your Recipe Book!</h1>
+<p>Search by tag</p>
+<ul>
+  <ul>
+    <% recipe.tags.each do |tag| %>
+      <li><%= tag.name %></li>
+    <% end %>
+  </ul>
+<p>Search by recipe name</p>

@@ -1,6 +1,6 @@
 class CreateRecipeTags < ActiveRecord::Migration
   def change
-    create_table :recipe_tags do |t|
+    create_table :recipe_tags, :id => false do |t|
       t.integer :recipe_id
       t.integer :tag_id
 
