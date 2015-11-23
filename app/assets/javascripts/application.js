@@ -15,3 +15,15 @@
 //= require turbolinks
 //= require bootstrap.min
 //= require_tree .
+
+
+ $(document).ready(function() {
+
+ $('.add-new-form').hide();
+
+  $('.add-new').click(function() {
+   $('.add-new-form').show();
+   $('.add-new').hide();
+
+   });
+ });

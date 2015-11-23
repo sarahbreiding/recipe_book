@@ -1,14 +1,16 @@
 class TagsController < ApplicationController
+  before_filter :set_tags, except: [:create, :update, :destroy]
+
   def index
-    @tags = Tag.all
     @recipes = Recipe.all
+    @tag = Tag.new
   end
 
   def create
     @tag = Tag.new(tag_params)
 
     if @tag.save
-      redirect_to @tag
+      redirect_to root_url
     else
       render 'new'
     end
@@ -39,10 +41,14 @@ class TagsController < ApplicationController
     @tag = Tag.find(params[:id])
     @tag.destroy
 
-    redirect_to tags_path
+    redirect_to root_url
   end
 
   private
+    def set_tags
+      @tags = Tag.all
+    end
+
     def tag_params
       params.require(:tag).permit(:name, :recipe_ids => [])
     end

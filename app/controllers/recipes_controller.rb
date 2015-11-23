@@ -1,5 +1,9 @@
 class RecipesController < ApplicationController
 
+
+before_filter :set_tags, except: [:create, :update, :destroy]
+
+
 def index
   @recipes = Recipe.all
   @tags = Tag.all
@@ -46,6 +50,12 @@ def destroy
 end
 
 private
+
+
+  def set_tags
+    @tags = Tag.all
+  end
+
   def recipe_params
     params.require(:recipe).permit(:name, :ingredients, :instructions, :cook_time, :prep_time, :source, :tag_ids => [])
   end

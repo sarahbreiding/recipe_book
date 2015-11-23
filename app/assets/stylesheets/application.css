@@ -15,6 +15,12 @@
  *= require_self
  */
 
-body {
-  margin: 15px;
+.recipe-title {
+  color: #fff;
+  margin-left: 1%;
 }
+
+.recipe-title a:hover {
+    text-decoration: none;
+}
+

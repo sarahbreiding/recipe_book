@@ -1,9 +1,13 @@
-<h1>Welcome to your Recipe Book!</h1>
-<p>Search by tag</p>
-<ul>
-  <ul>
-    <% recipe.tags.each do |tag| %>
-      <li><%= tag.name %></li>
+
+  <% @recipes.each do |recipe| %>
+    <%= div_for recipe, :class => 'col-sm-4 col-md-5' do %>
+      <h3><%= link_to recipe.name, recipe %></h3>
+      <p><%= recipe.prep_time %></p>
+      <p><%= recipe.cook_time %></p>
     <% end %>
-  </ul>
-<p>Search by recipe name</p>
+  <% end %>
+
+
+
+
+

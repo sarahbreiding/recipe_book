@@ -1,11 +1,22 @@
 <h2><%= @recipe.name %></h2>
-<p><%= @recipe.prep_time %></p>
-<p><%= @recipe.cook_time %></p>
+<p><%= link_to 'Edit', edit_recipe_path %>  <%= link_to 'Delete', recipe_path, method: :delete, data: {confirm: "Are you sure?"} %></p>
+<p><strong>Prep Time:</strong> <%= @recipe.prep_time %></p>
+<p><strong>Cook Time:</strong> <%= @recipe.cook_time %></p>
+<p><strong>Ingredients:</strong></p>
 <p><%= @recipe.ingredients %></p>
+<p><strong>Instructions:</strong></p>
 <p><%= @recipe.instructions %></p>
-<p><%= @recipe.source %></p>
-<ul>
+<p><strong>Source:</strong> <%= @recipe.source %></p>
+<h4>Tags</h4>
+<div>
   <% @recipe.tags.each do |tag| %>
-    <li><%= tag.name %></li>
+    <%= div_for tag, :class => 'col-sm-2 col-md-3' do %>
+      <div><%= link_to tag.name, tag %></div>
+    <% end %>
   <% end %>
-</ul>
+</div>
+
+
+
+
+

@@ -1,5 +1,12 @@
-<h1>Select a tag</h1>
-<% @tags.each do |tag| %>
-  <h3><%= tag.name %></h3>
-<% end %>
-<p>Or search by recipe name</p>
+<h1>Recipe Book</h1>
+<h4>Select a category</h4>
+<div class='list-group'>
+  <% @tags.each do |tag| %>
+    <a><%= link_to tag.name, tag, :class => 'list-group-item' %></a>
+  <% end %>
+  <a href='#' class='list-group-item add-new'>Add New</a>
+  <a class='list-group-item add-new-form'><%= render 'form' %></a>
+
+</div>
+<h4>Search by recipe name</h4>
+
