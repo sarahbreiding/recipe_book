@@ -1,6 +1,6 @@
 
   <% @recipes.each do |recipe| %>
-    <%= div_for recipe, :class => 'col-sm-4 col-md-5' do %>
+    <%= div_for recipe, :class => 'col-sm-4 col-md-5 recipe-blocks' do %>
       <h3><%= link_to recipe.name, recipe %></h3>
       <p><%= recipe.prep_time %></p>
       <p><%= recipe.cook_time %></p>

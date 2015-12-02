@@ -20,12 +20,22 @@
   margin-left: 1%;
 }
 
-.recipe-title a:hover {
-    text-decoration: none;
+a:hover {
+  text-decoration: none;
 }
 
 .checkbox-container input {
   margin: 10px;
  }
 
+.add-new-recipe-link {
+  color: #000;
+  font-weight: bold;
+  margin-right: 1%;
+  float: right;
+}
+
+.navbar {
+  margin-bottom: 10px;
+}
 

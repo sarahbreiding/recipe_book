@@ -3,9 +3,9 @@
 <p><strong>Prep Time:</strong> <%= @recipe.prep_time %></p>
 <p><strong>Cook Time:</strong> <%= @recipe.cook_time %></p>
 <p><strong>Ingredients:</strong></p>
-<p><%= @recipe.ingredients %></p>
+<p><%= simple_format(@recipe.ingredients) %></p>
 <p><strong>Instructions:</strong></p>
-<p><%= @recipe.instructions %></p>
+<p><%= simple_format(@recipe.instructions) %></p>
 <p><strong>Source:</strong> <%= @recipe.source %></p>
 <h4>Tags</h4>
 <div>
