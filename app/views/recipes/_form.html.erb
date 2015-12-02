@@ -17,10 +17,11 @@
     <p><%= f.label :source %>
        <%= f.text_field :source %>
     </p>
-    <p>
-      <%= collection_check_boxes(:recipe, :tag_ids, @tags, :id, :name) %>
-    </p>
-    <p>
+    <div class='checkbox-container'>
+      <%= collection_check_boxes :recipe, :tag_ids, @tags, :id, :name %>
+    </div>
       <%= f.submit %>
     </p>
   <% end %>
+
+

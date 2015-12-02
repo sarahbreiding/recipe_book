@@ -24,3 +24,8 @@
     text-decoration: none;
 }
 
+.checkbox-container input {
+  margin: 10px;
+ }
+
+
