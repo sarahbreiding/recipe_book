@@ -1,14 +1,10 @@
-<h1>All Recipes</h1>
 <% @recipes.each do |recipe| %>
-  <h2><%= recipe.name %></h2>
-  <p><%= recipe.prep_time %></p>
-  <p><%= recipe.cook_time %></p>
-  <p><%= recipe.ingredients %></p>
-  <p><%= recipe.instructions %></p>
-  <p><%= recipe.source %></p>
-  <ul>
-    <% recipe.tags.each do |tag| %>
-      <li><%= tag.name %></li>
-    <% end %>
-  </ul>
+  <%= div_for recipe, :class => 'col-sm-4 col-md-5 recipe-blocks' do %>
+    <h3><%= link_to recipe.name, recipe %></h3>
+    <p><%= recipe.prep_time %></p>
+    <p><%= recipe.cook_time %></p>
+  <% end %>
 <% end %>
+
+
+

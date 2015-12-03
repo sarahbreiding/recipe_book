@@ -1,8 +1,7 @@
 class RecipesController < ApplicationController
 
-
 before_filter :set_tags, except: [:create, :update, :destroy]
-
+before_filter :authenticate_user!
 
 def index
   @recipes = Recipe.all
