@@ -1,5 +1,5 @@
 <h2><%= @recipe.name %></h2>
-<p><%= link_to 'Edit', edit_recipe_path %>  <%= link_to 'Delete', recipe_path, method: :delete, data: {confirm: "Are you sure?"} %></p>
+<p><%= link_to 'Edit', edit_recipe_path %> | <%= link_to 'Delete', recipe_path, method: :delete, data: {confirm: "Are you sure?"} %></p>
 <p><strong>Prep Time:</strong> <%= @recipe.prep_time %></p>
 <p><strong>Cook Time:</strong> <%= @recipe.cook_time %></p>
 <p><strong>Ingredients:</strong></p>
