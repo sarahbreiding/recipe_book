@@ -1,5 +1,5 @@
 <h2><%= @tag.name %></h2>
-<p><%= link_to 'Edit', edit_tag_path %>  <%= link_to 'Delete', tag_path, method: :delete, data: {confirm: "Are you sure?"} %></p>
+<p><%= link_to 'Edit', edit_tag_path %> | <%= link_to 'Delete', tag_path, method: :delete, data: {confirm: "Are you sure?"} %></p>
 <ul>
   <% @tag.recipes.each do |recipe| %>
     <%= div_for recipe, :class => 'col-sm-4 col-md-5' do %>
