@@ -1,11 +1,6 @@
 class TagsController < ApplicationController
   before_filter :set_tags, except: [:create, :update, :destroy]
 
-  def index
-    @recipes = Recipe.all
-    @tag = Tag.new
-  end
-
   def create
     @tag = Tag.new(tag_params)
 

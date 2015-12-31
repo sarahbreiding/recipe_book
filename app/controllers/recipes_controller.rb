@@ -3,7 +3,11 @@ class RecipesController < ApplicationController
 before_filter :set_tags, except: [:create, :update, :destroy]
 
 def index
-  @recipes = Recipe.all
+  if params[:search]
+    @recipes = Recipe.search(params).paginate(:page => params[:page], :per_page => 25)
+  else
+    @recipes = Recipe.all.paginate(page: params[:page], per_page: 25)
+  end
   @tags = Tag.all
 end
 
@@ -48,8 +52,6 @@ def destroy
 end
 
 private
-
-
   def set_tags
     @tags = Tag.all
   end

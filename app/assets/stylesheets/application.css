@@ -15,6 +15,15 @@
  *= require_self
  */
 
+.navbar h2 {
+  display: inline-block;
+  width: 50%;
+}
+
+.navbar-form {
+  margin-top: 20px;
+}
+
 .recipe-title {
   color: #fff;
   margin-left: 1%;
@@ -39,3 +48,19 @@ a:hover {
   margin-bottom: 10px;
 }
 
+.pagination a {
+  padding: .5em;
+}
+
+.pagination .next_page, .pagination .previous_page {
+  border: white solid 1px;
+}
+
+.pagination .current {
+  background-color: #A7D9FF;
+  padding: .5em;
+}
+
+.search {
+  margin-right:.5em;
+}
