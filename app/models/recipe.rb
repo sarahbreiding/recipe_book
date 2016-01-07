@@ -6,4 +6,6 @@ class Recipe < ActiveRecord::Base
     recipes = all
     recipes = recipes.where("name ILIKE ?", "%#{params[:search]}%") if params[:search]
   end
+
 end
+
