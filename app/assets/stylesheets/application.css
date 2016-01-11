@@ -45,7 +45,15 @@ a:hover {
 }
 
 .navbar {
-  margin-bottom: 10px;
+  margin-bottom: 0;
+}
+
+.navbar-toggle {
+  float: left;
+}
+
+.navbar-toggle span {
+  background-color: white;
 }
 
 .pagination a {
@@ -63,4 +71,8 @@ a:hover {
 
 .search {
   margin-right:.5em;
+}
+
+.hidden {
+  display: none;
 }
