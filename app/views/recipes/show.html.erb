@@ -6,7 +6,7 @@
 <p><%= simple_format(@recipe.ingredients) %></p>
 <p><strong>Instructions:</strong></p>
 <p><%= simple_format(@recipe.instructions) %></p>
-<p><strong>Source:</strong> <%= @recipe.source %></p>
+<p><strong>Source:</strong> <%= auto_link @recipe.source %></p>
 <h4>Tags</h4>
 <div>
   <% @recipe.tags.each do |tag| %>

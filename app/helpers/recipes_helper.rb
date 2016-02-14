@@ -9,6 +9,12 @@ module RecipesHelper
     html << "</p>".html_safe
     html unless value.blank?
   end
+
+
+  def auto_link(x)
+    highlight(x, URI.extract(x), :highlighter => '<a href="'.html_safe + '\1' + '">'.html_safe + '\1' + '</a>'.html_safe)
+  end
+
 end
 
 
